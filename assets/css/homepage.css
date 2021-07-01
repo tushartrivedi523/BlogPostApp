@@ -1,0 +1,88 @@
+body{
+    padding:0;
+    margin:0;
+    background-color: rgba(174, 220, 238, 0.815);
+    font-family: sans-serif;
+}
+::-webkit-scrollbar {
+    display: none;
+  }
+.heading{
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 5vh;
+    color: blueviolet;
+    font-family: 'Baloo Tammudu 2', cursive;
+}
+.loginForm__heading{
+    text-align: end;
+    color: blueviolet;
+    font-size: 2rem;
+    font-family: 'Baloo Tammudu 2', cursive;
+}
+.loginBox{
+    display: flex;
+    justify-content: center;
+}
+.loginForm{
+    padding: 0px 180px 100px 20px;
+    background-color: rgb(211, 225, 226);
+    border-radius: 5%;
+    padding-top: -10px!important;
+}
+
+.loginForm__password{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.loginForm__buttons{
+    display: flex;
+    justify-content: end;
+}
+
+label{
+    font-family: 'Noto Serif', serif;
+    color: blueviolet;
+}
+input{
+    padding: 5px 20px;
+    border: none;
+}
+input[type=text]{
+    margin-top: 5px;
+    border-radius: 10px;
+    width:160%;
+}
+input[type=password]{
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 160%;
+}
+input[type=submit]{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-right: 5px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+}
+input[type=reset]{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+input:hover{
+    background-color:rgba(137, 43, 226, 0.089)
+}
+input[type=submit]:hover{
+    background-color: rgb(6, 177, 6);
+}
+input[type=reset]:hover{
+    background-color: rgb(185, 8, 8);
+}

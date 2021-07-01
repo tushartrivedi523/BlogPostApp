@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@800&display=swap" rel="stylesheet">
+
+    <title><%=blog[0].title%></title>
+    <link rel="stylesheet" href="/css/blogpage.css">
+  </head>
+  <body>
+    
+    <div class="container">
+        <div class="heading">
+            <div class="heading__left">
+                <div>Reader's Hub</div>
+                <div class="subHeading">A hoard for readers!</div>
+            </div>
+            <div class="heading__right">
+                <form action="/backToDashboard" method="POST">
+                    <input class="btn btn-warning" type="submit" value="Dashboard">
+                </form>            
+            </div> 
+        </div> 
+        <div class="horizontalLine"></div>
+        <div class="contentPart">
+            <%for(var i of blog){%>
+            <div class="contentPart__titleEditDelete">
+                <div class="contentPart__title">
+                    <h2 class="text-center"><%=i.title%></h2> 
+                </div>
+                <div class="contentPart__editDelete">
+                    <a href="/editPost/?id=<%=blog[0]._id%>"><i class="fa fa-edit" style="font-size:36px"></i></a>
+                    <a href="/deletePost/?id=<%=blog[0]._id%>" onclick="return confirm('Are you sure you want to continue?')"><i class="fa fa-trash" style="font-size:36px"></i></a> 
+                </div> 
+            </div>
+            
+            <p class="text-center"><%=i.content%></p>
+
+            <div class="mt-5 userId text-muted">-<%=i.userId%></div>
+            <%}%>
+        </div>
+    </div>
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

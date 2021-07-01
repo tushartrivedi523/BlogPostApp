@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/homepage.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@800&display=swap" rel="stylesheet">
+    <title>Login Page</title>
+</head>
+<body>
+    <div class="heading">
+        <span>Reader's Hub</span>
+    </div>
+<div class="loginBox">
+    
+    <div class="loginForm">
+        <div class="loginForm__heading">
+            <span><u>Login</u></span>
+        </div>
+        <form action="validateLogin" method="POST">
+            <div class="loginForm__userId">
+                <label for="userId">User Id</label><br>
+                <input type="text" name="userId" id="userId" >
+            </div>
+            <div class="loginForm__password">
+                <label for="password">Password</label><br>
+                <input type="password" name="password" id="password" >
+            </div>
+            <div class="loginForm__buttons">
+                <input type="submit" value="Login">
+                <input type="reset" value="Cancel">
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
